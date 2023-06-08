@@ -19,10 +19,8 @@ public class Pet {
     }
 
     public void introduce() {
-    	String favorite = "プログラミング";
         System.out.println("■僕の名前は" + name + "です");
         System.out.println("■ご主人様は" + masterName + "です");
-        System.out.println("■趣味は" + favorite + "です");
     }
 }
 

@@ -1,25 +1,65 @@
-public class Main{
-    public static void main(String[] args){
+import java.util.HashSet;
+import java.util.LinkedHashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
-        int[] data = {3, 1, 2, 7, 5};
-        
-       
-            for(int i = 0; i < 5; i++){
-            System.out.print(data[i] + " ");
+public class Curriculum {
+
+    public static void main(String[] args) {
+
+        HashSet<String> sampleSet1 = new HashSet<String>();
+
+        //適当に値を入れていく
+        sampleSet1.add("A");
+        sampleSet1.add("BA");
+        sampleSet1.add("ABC");
+        sampleSet1.add("ABCDE");
+        sampleSet1.add("CD");
+
+        System.out.println("HashSetなのでランダムで表示される");
+
+        for (String s1 : sampleSet1) {
+            System.out.println(s1);
         }
-        System.out.println();
-        for (int i = 0; i < data.length -1; i++) {
-            for (int j = data.length - 1; j > i; j--) {
-                
-                if(data[j - 1] > data[j]){
-                  int box = data[j - 1];
-                  data[j - 1] = data[j];
-                  data[j] = box;
-                }
-            }
+
+        TreeSet<String> sampleSet2 = new TreeSet<String>();
+
+        //適当に値を入れていく
+        sampleSet2.add("A");
+        sampleSet2.add("D");
+        sampleSet2.add("C");
+        sampleSet2.add("B");
+        System.out.println("TreeSetを使っているので、昇降順に表示される");
+
+        for (String s2 : sampleSet2) {
+            System.out.println(s2);
         }
-        for(int i = 0; i < data.length; i++){
-            System.out.print(data[i] + " ");
+
+        LinkedHashSet<String> sampleSet3 = new LinkedHashSet<String>();
+
+        sampleSet3.add("ABCD");
+        sampleSet3.add("ABCDEFGHIJK");
+        sampleSet3.add("ABCDE");
+        sampleSet3.add("ABCDEFGHIJ");
+        System.out.println("LinkedHashSetなので追加した順に表示");
+
+        for (String s3 : sampleSet3) {
+            System.out.println(s3);
+        }
+
+        TreeSet<String> sampleSet4 = new TreeSet<String>();
+
+        //適当に値を入れていく
+        sampleSet4.add("A");
+        sampleSet4.add("D");
+        sampleSet4.add("D");
+        sampleSet4.add("D");
+        sampleSet4.add("B");
+        sampleSet4.add("C");
+        System.out.println("同じ値は格納できないから「D」は一つとして考えるよ");
+
+        for (String s4 : sampleSet4) {
+            System.out.println(s4);
         }
     }
 }

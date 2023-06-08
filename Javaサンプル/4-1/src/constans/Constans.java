@@ -1,6 +1,6 @@
 package constans;
 	
-	public class Constants {
+	public class Constans {
 
 	    //定数（名前）
 	    public static final String CHECK_CLASS_JAVA = "java吉";
