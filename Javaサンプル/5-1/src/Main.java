@@ -27,7 +27,8 @@ public class Main {
 			array.set(1,"bar");
 			
 //      問③ fooが格納されているインデックスを出力してください。
-			System.out.println(array.get(2));
+			int index = array.indexOf("foo");
+			System.out.println(index);
 //	　<以下記述>
 		}
 
