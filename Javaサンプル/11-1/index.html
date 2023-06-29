@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        th, td {
+            padding : 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <select id = "select" onchange="changeLang()">
+        <option id="select" value = "選択してください">選択してください</option>
+        <option id="selected_jpn" value = "日本語">日本語</option>
+        <option id="selected_en" value = "English">English</option>
+        <option id="selected_all" value = "全て表示">全て表示</option>
+    </select>
+    <table>
+        <tr id = "table1">
+            <th>日本</th>
+            <td>こんにちは</td>
+            <td>ありがとう</td>
+            <td>さようなら</td>
+        </tr>
+        <tr id = "table2">
+            <th>English</th>
+            <td>Hello</td>
+            <td>Thank you</td>
+            <td>Good Bye</td>
+        </tr>
+
+    </table>
+
+    <script>
+        //①onchangeで使用されている関数の中身を実装してください。
+        function changeLang(){
+            let select_ja = document.getElementById('table1');
+            let select1_en = document.getElementById('table2');
+            const select  = document.querySelector('#select');
+            if(select.value === "日本語"){
+               select_ja.style.visibility="visible";
+               select1_en.style.visibility="hidden";
+            }else if(select.value === "English"){
+                select1_en.style.visibility="visible";
+                select_ja.style.visibility="hidden";
+            }else if(select.value === "全て表示"){
+                select_ja.style.visibility="visible";
+                select1_en.style.visibility="none";
+            }
+        }
+    </script>
+</body>
+</html>
