@@ -23,6 +23,7 @@
         <option id="selected_jpn" value = "日本語">日本語</option>
         <option id="selected_en" value = "English">English</option>
         <option id="selected_all" value = "全て表示">全て表示</option>
+        
     </select>
     <table>
         <tr id = "table1">
@@ -54,7 +55,7 @@
                 select_ja.style.visibility="hidden";
             }else if(select.value === "全て表示"){
                 select_ja.style.visibility="visible";
-                select1_en.style.visibility="none";
+                select1_en.style.visibility="visible";
             }
         }
     </script>
